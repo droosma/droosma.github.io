@@ -1,0 +1,7 @@
+{% if include.content contains '<pre class="highlight">' %}
+  {% assign content = include.content | replace: '<pre class="highlight"><code', '<code' %}
+  {% assign content = content | replace: '</code></pre>', '</code>' %}
+  {{ content }}
+{% else %}
+  {{ include.content }}
+{% endif %}
