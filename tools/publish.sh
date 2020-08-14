@@ -1,12 +1,3 @@
-#!/bin/bash
-#
-# Initial the Categories/Tags pages and Lastmod for posts and then push to remote
-#
-# v2.0
-# https://github.com/cotes2020/jekyll-theme-chirpy
-# © 2019 Cotes Chung
-# Published under MIT License
-
 set -eu
 
 CATEGORIES=false
@@ -27,8 +18,8 @@ check_status() {
 
 
 update_files() {
-  bash _scripts/sh/create_pages.sh
-  bash _scripts/sh/dump_lastmod.sh
+  bash _scripts/create_pages.sh
+  bash _scripts/dump_lastmod.sh
 }
 
 

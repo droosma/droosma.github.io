@@ -1,11 +1,3 @@
-#!/bin/bash
-#
-# Build jekyll site and store site files in ./_site
-# v2.0
-# https://github.com/cotes2020/jekyll-theme-chirpy
-# © 2019 Cotes Chung
-# Published under MIT License
-
 set -eu
 
 CMD="JEKYLL_ENV=production bundle exec jekyll b"
@@ -51,8 +43,8 @@ _build() {
   cd $CONTAINER
   echo "$ cd $(pwd)"
 
-  bash _scripts/sh/create_pages.sh
-  bash _scripts/sh/dump_lastmod.sh
+  bash _scripts/create_pages.sh
+  bash _scripts/dump_lastmod.sh
 
   CMD+=" -d ${DEST}"
   echo "\$ $CMD"
