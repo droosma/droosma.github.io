@@ -73,8 +73,8 @@
     {% endcapture %}
 
     {% if url != '' %}
-    <a href="{{ url }}" {% unless entry.noblank %}target="_blank"{% endunless %}>
-      <i class="{{ entry.icon }}"></i>
+    <a href="{{ url }}" rel="noopener" {% unless entry.noblank %}target="_blank"{% endunless %}>
+      <i class="{{ entry.icon }}" alt="{{ entry.type }}"></i>
     </a>
     {% endif %}
   {% endfor %}
