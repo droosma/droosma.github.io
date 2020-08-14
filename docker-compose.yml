@@ -1,0 +1,10 @@
+version: "3.0"
+
+services:
+  dev:
+    image: jekyll/builder
+    command: ["jekyll", "serve", "--incremental", "--watch", "--verbose", "--force_polling" ]
+    ports: 
+      - "4000:4000"
+    volumes: 
+      - ./:/srv/jekyll
